@@ -13,12 +13,12 @@ import {
 } from "react-bootstrap";
 
 import classNames from "classnames/bind";
-import styles from "@/styles/header.module.scss";
+// import styles from "@/styles/header.module.scss";
 import Link from "next/link";
 import { useEffect } from "react";
 import useSWR from "swr";
 import AppTable from "@/components/app.table";
-const cx = classNames.bind(styles);
+// const cx = classNames.bind(styles);
 
 function UserPage() {
   const fetcher = (url: string) =>

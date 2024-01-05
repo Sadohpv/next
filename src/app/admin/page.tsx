@@ -12,6 +12,7 @@ function AdminHome() {
       <div>
         <Button variant="primary" onClick={handleClick}>Back Home</Button>
       </div>
+      
     </div>
   );
 }

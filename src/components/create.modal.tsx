@@ -12,6 +12,7 @@ import {
 } from "react-bootstrap";
 // import Modal from "react-bootstrap/Modal";
 import { Modal } from "react-bootstrap";
+import { mutate } from "swr";
 interface IProps {
   showModal: boolean;
   edit?: boolean;
@@ -45,6 +46,12 @@ function CreateModal({
       setUserInfor(null);
       setShowModal(false);
   };
+  const handleSubmit = ()=>{
+    //Call API ADD or Edit 
+    // mutate("https://jsonplaceholder.typicode.com/users") 
+    // same link with api to get data to refresh the data after change
+    
+  }
   return (
     <Modal
       show={showModal}
@@ -90,7 +97,7 @@ function CreateModal({
         <Button variant="outline-secondary" onClick={handleCloseModal}>
           Close
         </Button>
-        <Button variant="outline-primary">Understood</Button>
+        <Button variant="outline-primary" onClick={handleSubmit}>Understood</Button>
       </ModalFooter>
     </Modal>
   );

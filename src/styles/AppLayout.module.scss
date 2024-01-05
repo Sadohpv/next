@@ -1,0 +1,32 @@
+.header,
+.footer {
+}
+.body {
+  position: relative;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+//   background-color: red;
+//   padding: 56px 0;
+  align-items: center;
+
+  .left_main,.right_main{
+    width: 28%;
+    max-width: 340px;
+    height: calc(100vh - 140px);
+    background-color: rgb(251, 253, 206);
+    padding: 0 0 0 14px;
+    
+  }
+  .middle_main{
+    flex:1;
+  height: 100vh;
+  display: flex;
+  padding: 26px 16px;
+  z-index: 1031;
+
+
+  }
+}
