@@ -3,7 +3,7 @@ import { CHANGE_SLOT_LEFT, CHANGE_SLOT_RIGHT } from "../actions/slotAction";
 
 const INITIAL_STATE = {
   slot_left: 1,
-  slot_right: 2,
+  slot_right: 1,
 };
 
 interface Action {
