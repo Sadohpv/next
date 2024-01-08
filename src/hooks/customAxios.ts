@@ -9,6 +9,7 @@ const instance = axios.create({
 instance.interceptors.response.use(
   (response: any) => {
     //response.headers("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    // console.log("Here");
     return response.data ? response.data : response.status;
   },
   (error: any) => {
