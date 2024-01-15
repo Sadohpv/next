@@ -6,23 +6,22 @@ interface User {
   email: srting;
 }
 interface IUser {
+  status :1;
   id: number | undefined;
-  userName: string | undefined;
-  avatar: string | undefined;
   email: string | undefined;
+  password : string | undefined;
+  userName: string | undefined;
   firstName: string | undefined;
   lastName: string | undefined;
+  avatar: string | undefined;
+  isAdmin : boolean | undefined
 }
 // const [data, setData] = useState<DataResponse>({});
 
 interface FailResponse {
-  reg: {
-    id: number | undefined;
-    userName: string | undefined;
-    avatar: string | undefined;
-    email: string | undefined;
-    firstName: string | undefined;
-    lastName: string | undefined;
-  };
-  status : number;
+ 
+
+  status: 0;
+  message : string | null;
 }
+

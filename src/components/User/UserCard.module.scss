@@ -1,0 +1,134 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  //   background-color: red;
+  padding: 6px 1px 6px 0;
+  display: flex;
+  .box {
+    width: 100%;
+    height: 100%;
+    // background-color: red;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    .header {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .background {
+        width: 100%;
+        height: 150px;
+        // max-height: 150px;
+        object-fit: cover;
+        -webkit-mask-image: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          from(rgba(0, 0, 0, 1)),
+          to(rgba(0, 0, 0, 0.5))
+        );
+        mask-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 1),
+          rgba(0, 0, 0, 0.5)
+        );
+      }
+      .avatar_box {
+        width: 56px;
+        height: 56px;
+        position: relative;
+
+        .avatar {
+          width: 56px;
+          height: 56px;
+          // background-color: black;
+          position: absolute;
+          top: -28px;
+          overflow: hidden;
+          object-fit: cover;
+          border-radius: 50%;
+          margin-bottom: 28px;
+          border: 4px solid white;
+        }
+      }
+
+      &:before {
+        content: " ";
+        position: absolute;
+
+        top: 100px;
+        z-index: 1;
+        margin: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) and (max-width:1024px) {
+  .wrapper {
+    .box {
+      .header {
+        .avatar_box {
+          --number: 70px;
+          width: var(--number);
+          height: var(--number);
+
+          .avatar {
+            width: var(--number);
+            height: var(--number);
+            // background-color: black;
+            position: absolute;
+            top: calc(-1 * var(--number) / 2);
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1024px) and (max-width:1140px) {
+    .wrapper {
+      .box {
+        .header {
+          .avatar_box {
+            --number: 90px;
+            width: var(--number);
+            height: var(--number);
+  
+            .avatar {
+              width: var(--number);
+              height: var(--number);
+              // background-color: black;
+              position: absolute;
+              top: calc(-1 * var(--number) / 2);
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 1140px)  {
+    .wrapper {
+      .box {
+        .header {
+          .avatar_box {
+            --number: 100px;
+            width: var(--number);
+            height: var(--number);
+  
+            .avatar {
+              width: var(--number);
+              height: var(--number);
+              // background-color: black;
+              position: absolute;
+              top: calc(-1 * var(--number) / 2);
+            }
+          }
+        }
+      }
+    }
+  }

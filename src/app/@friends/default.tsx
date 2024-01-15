@@ -12,9 +12,7 @@ export default function DefaultFriendPage() {
     <>
       <div className={cx("wrapper")}>
         <div className={cx("comment")}>
-          <span>
-            Baka
-          </span>
+          <span>Baka</span>
           <CommentIcon />
         </div>
         <img src={images.kaguya.src} alt="Kaguya" />
