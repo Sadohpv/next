@@ -6,6 +6,7 @@ import Header from "@/components/Header/Header";
 import classNames from "classnames/bind";
 import styles from "@/styles/AppLayout.module.scss";
 import Footer from "@/components/Footer/Footer";
+import 'react-tippy/dist/tippy.css'
 
 import ReduxProvider from "@/redux/ReduxProvider";
 const inter = Inter({ subsets: ["latin"] });

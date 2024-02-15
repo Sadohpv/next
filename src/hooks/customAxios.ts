@@ -2,8 +2,10 @@ import axios from "axios";
 
 const instance = axios.create({
   baseURL: "http://localhost:8080",
-  headers: { "Access-Control-Allow-Origin": "*" },
-  withCredentials: true, // false nếu muốn chặn server set cookies
+  headers: {
+    "Access-Control-Allow-Origin": "*",
+    withCredentials: true, // false nếu muốn chặn server set cookies
+  },
 });
 
 instance.interceptors.response.use(

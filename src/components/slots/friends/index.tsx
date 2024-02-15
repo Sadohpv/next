@@ -11,15 +11,14 @@ const cx = classNames.bind(styles);
 function InforSlotPage({}) {
   const id_infor = useAppSelector((state) => state.infor.hold_infor);
   // console.log(id_infor[id_infor.length - 1]);
-  const [data, setData] = useState<IUser | null |FailResponse >(null);
+  const [data, setData] = useState<IUser | null | FailResponse>(null);
   const fetchData = async () => {
     const res = await testService.handleGetDataUserService(
       id_infor[id_infor.length - 1]
-      // 10
     );
-    
-    if (res && res.status !== 400) {
-    
+    // 10
+
+    if (res && res.status !== 0) {
       setData(res);
     } else {
       setData(null);
@@ -34,9 +33,7 @@ function InforSlotPage({}) {
       <div className={cx("wrapper")}>
         <div className={cx("main")}>
           <div className={cx("content")}>
-            
-            
-            <UserCard data={data}/>
+            <UserCard data={data} />
           </div>
         </div>
       </div>
@@ -45,9 +42,7 @@ function InforSlotPage({}) {
     return (
       <div className={cx("wrapper")}>
         <div className={cx("main")}>
-          <div className={cx("content")}>
-
-          </div>
+          <div className={cx("content")}></div>
         </div>
       </div>
     );

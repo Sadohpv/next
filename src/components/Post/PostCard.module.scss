@@ -171,15 +171,18 @@
     height: 60px;
 
     .button {
-      width: 30%;
+      width: 28%;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 40px;
+      height: 36px;
       //   background-color: red;
       border-radius: 12px;
       &:hover {
-        background-color: var(--color-hover);
+        background-color: white;
+        color:black;
+        user-select: none;
+        cursor: pointer;
       }
     }
     &:before {

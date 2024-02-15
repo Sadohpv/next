@@ -21,7 +21,7 @@ interface IUser {
 interface FailResponse {
  
 
-  status: 0;
+  status: 0 ;
   message : string | null;
 }
 

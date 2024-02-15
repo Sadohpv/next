@@ -19,6 +19,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      position: relative;
 
       .background {
         width: 100%;
@@ -39,21 +40,87 @@
         );
       }
       .avatar_box {
-        width: 56px;
         height: 56px;
+        box-sizing: border-box;
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 8px;
 
-        .avatar {
-          width: 56px;
-          height: 56px;
-          // background-color: black;
+        .name {
+          // position: absolute;
+          height: 50%;
+          width: 100%;
+          // background-color: red;
+          display: flex;
+          align-items: flex-end;
+
+          .avatar {
+            width: 56px;
+            height: 56px;
+
+            overflow: hidden;
+            object-fit: cover;
+            border-radius: 50%;
+           
+
+            // margin-bottom: 10%;
+            border: 4px solid white;
+          }
+          span {
+            // margin-left: calc(56px + 14px);
+            // line-height: 50%;
+            font-size: 14px;
+            font-weight: 700;
+            // text-align: ce
+            height: 100%;
+            display : flex;
+            align-items: center;
+            p{
+            // height: 100%;
+            line-height: 16px;
+
+            }
+          }
+          // bottom: 0;
+        }
+        .action {
+          width: calc(100% - 16px);
+
+          // background-color: green;
+
+          height: 100%;
           position: absolute;
-          top: -28px;
-          overflow: hidden;
-          object-fit: cover;
-          border-radius: 50%;
-          margin-bottom: 28px;
-          border: 4px solid white;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .button_box {
+            display: flex;
+            // padding: 8px;
+            // justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            height: auto;
+            gap: 10px;
+            .button {
+              width: 36px;
+              height: 36px;
+              // padding: 8px;
+              background-color: black;
+              display: flex;
+              border-radius: 12px;
+              font-size: 14px;
+              box-sizing: border-box;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+
+              svg {
+                fill: white;
+              }
+            }
+          }
         }
       }
 
@@ -68,67 +135,135 @@
     }
   }
 }
-
-@media (min-width: 800px) and (max-width:1024px) {
+@media (max-width: 800px) {
   .wrapper {
     .box {
       .header {
         .avatar_box {
           --number: 70px;
-          width: var(--number);
-          height: var(--number);
+          width: 100%;
+          height: 139px;
+         
+          .name {
+            position : relative;
+            flex-direction: column;
+            align-items: center;
+            height:65px;
+            .avatar {
+              position : absolute;
+              width: var(--number);
+              height: var(--number);
+              top: -35px;
+            }
+            span {
+              height:56px;
+            align-items: flex-end;
 
-          .avatar {
-            width: var(--number);
-            height: var(--number);
-            // background-color: black;
-            position: absolute;
-            top: calc(-1 * var(--number) / 2);
+            }
+          }
+          .action {
+            .button_box {
+              // height: auto;
+              // margin-top: 30px;
+              // background-color: red !important;
+              flex:1;
+              justify-content: space-between;
+              .button {
+                width: 32px;
+                height: 32px;
+                // padding: 8px;
+                background-color: black;
+                display: flex;
+                // border-radius: 50%;
+
+                span {
+                  display: none;
+                }
+              }
+            }
           }
         }
       }
     }
   }
 }
-@media (min-width: 1024px) and (max-width:1140px) {
-    .wrapper {
-      .box {
-        .header {
-          .avatar_box {
-            --number: 90px;
-            width: var(--number);
-            height: var(--number);
-  
+@media (min-width: 800px) and (max-width: 1024px) {
+  .wrapper {
+    .box {
+      .header {
+        .avatar_box {
+          --number: 70px;
+          width: 100%;
+
+          height: var(--number);
+
+         
+          .name {
             .avatar {
               width: var(--number);
               height: var(--number);
-              // background-color: black;
-              position: absolute;
-              top: calc(-1 * var(--number) / 2);
+  
+             
+            }
+            span {
+              // margin-left: calc(var(--number));
             }
           }
         }
       }
     }
   }
-  @media (min-width: 1140px)  {
-    .wrapper {
-      .box {
-        .header {
-          .avatar_box {
-            --number: 100px;
-            width: var(--number);
-            height: var(--number);
-  
+}
+@media (min-width: 1024px) and (max-width: 1140px) {
+  .wrapper {
+    .box {
+      .header {
+        .avatar_box {
+          --number: 90px;
+          // width: var(--number);
+          width: 100%;
+
+          height: var(--number);
+
+          
+          .name {
             .avatar {
               width: var(--number);
               height: var(--number);
-              // background-color: black;
-              position: absolute;
-              top: calc(-1 * var(--number) / 2);
+             
+            }
+            span {
+              // margin-left: calc(var(--number) + 16px);
             }
           }
         }
       }
     }
   }
+}
+@media (min-width: 1140px) {
+  .wrapper {
+    .box {
+      .header {
+        .avatar_box {
+          --number: 100px;
+          // width: var(--number);
+          width: 100%;
+
+          height: var(--number);
+
+          
+          .name {
+            .avatar {
+              width: var(--number);
+              height: var(--number);
+            }
+            span {
+            
+            }
+          }
+        }
+      }
+    }
+  }
+}
